@@ -1,4 +1,14 @@
-export default function Home() {
+export const getUser = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await res.json();
+  return data;
+};
+
+export default async function Home() {
+  const users = await getUser();
+
+  console.log(users);
+
   return (
     <main className="flex min-h-screen flex-col items-center gap-5 p-24">
       <h1 className="text-5xl font-bold">Welcome to NextJS</h1>
@@ -24,6 +34,15 @@ export default function Home() {
       </p>
 
       <h1>AWS ADDED</h1>
+
+      <div className="mt-10">
+        <h2>Users</h2>
+        <ul>
+          {users.map((user: any) => (
+            <li key={user.id}>{user.name}</li>
+          ))}
+        </ul>
+      </div>
     </main>
   );
 }
