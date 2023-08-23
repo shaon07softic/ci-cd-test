@@ -1,8 +1,8 @@
-export async function getUser() {
+const getUser: () => Promise<any> = async () => {
   const res: any = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await res.json();
   return data;
-}
+};
 
 export default async function Home() {
   const users = await getUser();

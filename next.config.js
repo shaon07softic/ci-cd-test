@@ -4,7 +4,7 @@
 const nextConfig = {
     output: 'export',
     typescript: {
-        ignoreBuildErrors: true,
+        ignoreBuildErrors: false,
      },
    
     // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
