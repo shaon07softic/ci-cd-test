@@ -22,6 +22,8 @@ export default function Home() {
         aspernatur fugit fugiat rerum ipsam quos quas pariatur vero. Iusto voluptatem et vero alias
         quibusdam numquam reiciendis inventore, voluptate quas.
       </p>
+
+      <h1>AWS ADDED</h1>
     </main>
   );
 }
