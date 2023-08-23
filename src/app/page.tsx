@@ -1,13 +1,11 @@
-export const getUser = async () => {
+export async function getUser() {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await res.json();
   return data;
-};
+}
 
 export default async function Home() {
   const users = await getUser();
-
-  console.log(users);
 
   return (
     <main className="flex min-h-screen flex-col items-center gap-5 p-24">
